@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Demo</title>
+  <style>
+    /* Set background to black and remove margins */
+    body {
+      background-color: black;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    /* Ensure the canvas is positioned behind the inputs */
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Position the input controls on top with a higher z-index */
+    #controls {
+      position: absolute;
+      top: 80px;
+      left: 10px;
+      z-index: 10;
+      color: white;
+      font-family: sans-serif;
+    }
+  </style>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <!-- Controls container with inputs remains on top -->
+  <div id="controls">
+    <label>
+      Angle X Speed:
+      <input id="angleXSpeed" type="number" step="0.001" value="0.000">
+    </label>
+    <br>
+    <label>
+      Angle Y Speed:
+      <input id="angleYSpeed" type="number" step="0.001" value="0.000">
+    </label>
+    <br>
+    <label>
+      Angle Z Speed:
+      <input id="angleZSpeed" type="number" step="0.001" value="0.000">
+    </label>
+    <br>
+    <small>Press SPACEBAR to pause/resume</small>
+  </div>
+  <!-- The canvas element for rendering the scene -->
+  <canvas id="canvas">No bunnies for you! Come back in... one year!</canvas>
+  <!--
+ __         __     __   __     __  __     __         ______     ______     ______    
+/\ \       /\ \   /\ "-.\ \   /\ \/ /    /\ \       /\  __ \   /\  == \   /\  ___\   
+\ \ \____  \ \ \  \ \ \-.  \  \ \  _"-.  \ \ \____  \ \  __ \  \ \  __<   \ \___  \  
+ \ \_____\  \ \_\  \ \_\\"\_\  \ \_\ \_\  \ \_____\  \ \_\ \_\  \ \_____\  \/\_____\ 
+  \/_____/   \/_/   \/_/ \/_/   \/_/\/_/   \/_____/   \/_/\/_/   \/_____/   \/_____/ 
+-->
+  <script src="js/3d2.js"></script>
+</body>
+
+</html>
